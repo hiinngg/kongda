@@ -1,0 +1,96 @@
+{extend name="indexlayout" /}
+{block name="product"}active{/block}
+{block name="css"}
+.nav-pills .nav-link{
+border-radius:0;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+background: #f08200;
+}
+.btn-outline-secondary {
+    color: #707070;
+    background-color:#ededed;
+    background-image: none;
+    border-color: #eee;
+}
+.btn-outline-secondary:hover,.btn-outline-secondary:active{
+    color: #fff !important;
+    background-color:  #f08200 !important;
+    border-color: #ECECEC !important;
+}
+
+
+{/block}
+{block name="content"}
+<div class="container bg-white pb-3">
+<h1>LED MODULE</h1>
+<hr></hr>
+<div class="row ">
+
+<div class="col-md-3">
+	 <div class="nav flex-column nav-pills rounded bg-dark text-white" id="v-pills-tab" role="tablist" aria-orientation="vertical"  style="">
+	  <a class="nav-link orange rounded-top text-white"  href="#">LED Module</a>
+	  <a class="nav-link active text-white" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+	  <a class="nav-link text-white" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+	  <a class="nav-link text-white" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+	  <a class="nav-link text-white" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+	</div>
+</div>
+
+<div  class="col-md-9">
+	<div class="tab-content  " id="v-pills-tabContent">
+	  <div class="tab-pane fade show active  " id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+	  
+	  <div class="list w-100 d-flex align-item-center flex-wrap justify-content-center mt-3 mt-md-0  justify-content-md-start justify-content-sm-start">
+	  
+	    <div class="p-detail d-flex flex-column align-item-center text-center mb-3 mr-3 " data-pid="1" style="width:182px;">
+	     <img src=""  style="width:182px;height:182px;" alt="" />
+	     <h4>Name</h4>
+	     <button type="button" class="btn btn-outline-secondary">Detail</button>
+	  </div>
+	  
+	   <div class="d-flex flex-column align-item-center text-center mb-3 mr-3" style="width:182px;">
+	     <img src=""  style="width:182px;height:182px;" alt="" />
+	     <h4>Name</h4>
+	     <button type="button" class="btn btn-outline-secondary">Detail</button>
+	  </div>
+	   <div class="d-flex flex-column align-item-center text-center mb-3 mr-3" style="width:182px;">
+	     <img src=""  style="width:182px;height:182px;" alt="" />
+	     <h4>Name</h4>
+	     <button type="button" class="btn btn-outline-secondary">Detail</button>
+	  </div>
+	   <div class="d-flex flex-column align-item-center text-center mb-3 mr-3" style="width:182px;">
+	     <img src=""  style="width:182px;height:182px;" alt="" />
+	     <h4>Name</h4>
+	     <button type="button" class="btn btn-outline-secondary">Detail</button>
+	  </div>
+	   <div class="d-flex flex-column align-item-center text-center mb-3 mr-3" style="width:182px;">
+	     <img src=""  style="width:182px;height:182px;" alt="" />
+	     <h4>Name</h4>
+	     <button type="button" class="btn btn-outline-secondary">Detail</button>
+	  </div>
+	  </div>
+	  
+	
+	  </div>
+	  <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+	  <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+	  <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+	</div>
+</div>
+</div>
+
+
+
+</div>
+{/block}
+{block name="script"}
+$(".list").on("click",".p-detail",function(){
+var pid=$(this).attr("data-pid");
+location.href="/index/index/productdetail?pid="+pid;
+
+})
+
+{/block}
+
+
